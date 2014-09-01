@@ -1,0 +1,28 @@
+<ul>
+<li>This is sample/index/index.phtml
+	<ul>
+		<li>
+			<?php 
+			echo $this->getPlugin('comment/index/render-view'); 
+			?>
+		</li>
+		<li>
+			<?php 
+			echo $this->getPlugin('comment/index/render-closure', 'ViewModel'); 
+			?>
+		</li>
+		<li>
+			<?php 
+			$plugin = $this->getPlugin('comment/index/render-closure', 'Array');
+			var_dump($plugin);
+			?>
+		</li>
+		<li>
+			<?php 
+			$plugin = $this->getPlugin('comment/index/render-closure', 'String');
+			var_dump($plugin);
+			?>
+		</li>
+	</ul>
+</li>
+</ul>

@@ -1,0 +1,28 @@
+<?php /* @var $collector \Plugins\Toolbar\Collector\PluginsCollector */  
+$data = $collector->getPluginsData();
+
+$toolbarItems = "";
+foreach ($data['loadedPlugins'] as $pluginName) {  
+		$toolbarItems .= '<span class="zdt-toolbar-info">'; 
+		$toolbarItems .= '<span class="zdt-detail-label" style="text-transform: none;">'.$pluginName.'</span>';
+		$toolbarItems .= '</span>'; 
+}
+?>
+ <div class="zdt-toolbar-entry">
+    <div class="zdt-toolbar-preview">
+   		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJRJREFUeNpiYKAm+P//Pz8Qn/9PJMCl+T0Q6+OxJB7DADI0x8MMYIRKnAdSBkC8AYgv4NAvAMQFQJzAyMi4EGQAIwhADQCZdoBAEIEsWADUUgjTA9LPApMFsh0JBPB+IPUBXZyJ0pgbogYgRzUTmZoPwKKbVAMMoJofALEDsqn/ibB5PzQVglIsP7oksQBTM6UAIMAA1s7Jy7M0ghYAAAAASUVORK5CYII="/>
+        <span class="zdt-toolbar-info"> 
+            Plugins ( <span><?php echo count($data['loadedPlugins']);?></span> )
+          
+        </span>
+    </div> 
+    <div class="zdt-toolbar-detail zdt-toolbar-detail-overflow" style="width:300px;"> 
+         <?php echo $toolbarItems; ?>
+        <span class="zdt-toolbar-info zdt-toolbar-info-redundant zdt-toolbar-topspacing">
+            <span class="zdt-detail-label">Plugins</span>
+            <span class="zdt-detail-value zdt-detail-value-right">
+                <?php echo count($data['loadedPlugins']); ?>
+            </span>
+        </span>
+    </div>
+</div>

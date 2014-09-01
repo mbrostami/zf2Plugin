@@ -1,0 +1,46 @@
+<div class="alert alert-info">
+This is plugins/comment/index/render-view.phtml<br>
+Any of your project controller/action can be a plugin !!<br>
+A plugin : <br>
+&nbsp;&nbsp;&nbsp;Can be a form such as comment box, with submit, and save to database<br>
+&nbsp;&nbsp;&nbsp;An html renderer.<br>
+&nbsp;&nbsp;&nbsp;DataTable generator<br>
+&nbsp;&nbsp;&nbsp;Ajax Search<br>
+&nbsp;&nbsp;&nbsp;And ...<br>
+There is three method to using a plugin : <br>
+&nbsp;&nbsp;&nbsp;Plugin returns a ViewModel object and you should just echo that to render plugin controller and view.<br>
+&nbsp;&nbsp;&nbsp;Plugin returns a Closure which can get some params from your view and then returns html|array|ViewModel|object|anyType ...<br>
+&nbsp;&nbsp;&nbsp;Plugin returns just array or string
+<hr>
+Test send data by entering following buttons :<br>
+<?php 
+if (isset($this->postData['postVariable'])) {
+	var_dump($this->postData['postVariable']);
+}
+?>
+<div class="ajaxContent"></div>
+<form action="" method="post" id="sampleForm">
+	<input type="hidden" name="postVariable" value="Post Variable">
+	<input type="submit" value="Simple Send">
+</form>
+<form action="" method="post" id="ajaxForm">
+	<input type="hidden" name="ajaxVariable" id="ajaxVariable" value="Ajax Variable">
+	<input type="submit" value="Ajax Send">
+</form>
+</div> 
+
+<script type="text/javascript">
+$('#ajaxForm').submit(function(e) {
+	e.preventDefault(); 
+	$('.ajaxContent').html("");
+	$.ajax({
+		url:"/plugins/comment/index/ajax",
+		type:"post",
+		data:{
+			ajaxVariable:$('#ajaxVariable').val()
+		}, success:function(data) {
+			$('.ajaxContent').html(data);
+		}
+	}); 
+});
+</script>
