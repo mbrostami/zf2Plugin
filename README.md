@@ -1,13 +1,13 @@
 zf2Plugin
 =========
 
-Plugin component for Zend Framework 2
+Plugin component for Zend Framework 2<br>
 Create your custom flexible plugins by zf2plugin
 
 Requirements
 ============
-PHP >= 5.3
-ZendDeveloperTools (optional)
+PHP >= 5.3<br>
+<a href="https://github.com/zendframework/ZendDeveloperTools">ZendDeveloperTools</a> (optional)
 
 Where can I use this?
 =====================
