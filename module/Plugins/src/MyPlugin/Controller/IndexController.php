@@ -1,8 +1,6 @@
 <?php
-namespace Comment\Controller;
-  
-use Comment\Model\CommentTable; 
-use Comment\Form\CommentForm;
+namespace MyPlugin\Controller;
+   
 use Zend\View\Model\ViewModel; 
 use Zend\Mvc\Controller\AbstractActionController;
  
@@ -24,7 +22,7 @@ class IndexController extends AbstractActionController
 			if ($paramsFromMainView == 'ViewModel') {
 				$viewModel = new ViewModel($view);
 				$viewModel->setVariable('mainViewParam', $paramsFromMainView); 
-				$viewModel->setTemplate("comment/index/render-closure.phtml");
+				$viewModel->setTemplate("my-plugin/index/render-closure.phtml");
 				return $viewModel;
 			} elseif ($paramsFromMainView == 'Array') {
 				return array(

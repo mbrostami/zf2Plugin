@@ -10,12 +10,12 @@
 return array(
     'router' => array(
         'routes' => array( 
-            'plugins-comment' => array(
+            'plugins-my-plugin' => array(
                 'type'    => 'segment',
                 'options' => array(
-                    'route'    => '/plugins/comment[/:controller][/:action]', 
+                    'route'    => '/plugins/my-plugin[/:controller][/:action]', 
                     'defaults' => array(
-                        '__NAMESPACE__' => 'Comment\Controller',
+                        '__NAMESPACE__' => 'MyPlugin\Controller',
                         'controller'    => 'Index',
                         'action'        => 'index' 
                     ),
@@ -25,12 +25,12 @@ return array(
     ),  
     'controllers' => array (
     		'invokables' => array (
-    				'Comment\Controller\Index' => 'Comment\Controller\IndexController',
+    				'MyPlugin\Controller\Index' => 'MyPlugin\Controller\IndexController',
     		)
     ),
     'autoload-plugins' => array(
-    		'comment' => array(
-    				'comment/index/render-view' => array(
+    		'my-plugin' => array(
+    				'my-plugin/index/render-view' => array(
 		    				'patterns' => array(
 		    					'/.*/'  //plugin will autoload in all routes
 		    					// '/sample-*/'  plugin will autoload in all routes which start with sample-
@@ -38,9 +38,9 @@ return array(
 		    				'routes' => array(
  		    					// 'sample-index-index'  // exactly match by this routes
 		    				) 
-    				),'comment/index/render-closure' => array(
+    				),'my-plugin/index/render-closure' => array(
 		    				'patterns' => array(
-  		    					// '/.*/'
+  		    					// plugin doesn't load auto we load this by SampleController
 		    				) 
     				)
     		)

@@ -3,23 +3,23 @@
 	<ul>
 		<li>
 			<?php 
-			echo $this->getPlugin('comment/index/render-view'); 
+			echo $this->getPlugin('my-plugin/index/render-view'); 
 			?>
 		</li>
 		<li>
 			<?php 
-			echo $this->getPlugin('comment/index/render-closure', 'ViewModel'); 
+			echo $this->getPlugin('my-plugin/index/render-closure', 'ViewModel'); 
 			?>
 		</li>
 		<li>
 			<?php 
-			$plugin = $this->getPlugin('comment/index/render-closure', 'Array');
+			$plugin = $this->getPlugin('my-plugin/index/render-closure', 'Array');
 			var_dump($plugin);
 			?>
 		</li>
 		<li>
 			<?php 
-			$plugin = $this->getPlugin('comment/index/render-closure', 'String');
+			$plugin = $this->getPlugin('my-plugin/index/render-closure', 'String');
 			var_dump($plugin);
 			?>
 		</li>

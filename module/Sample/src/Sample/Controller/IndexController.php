@@ -12,7 +12,7 @@ class IndexController extends AbstractActionController
   		/// If you want to enable plugin manualy you can use these lines {
 	  		$params = array();
 	  		$this->enablePlugins(array(
-	  			'comment/index/render-closure' => $params
+	  			'my-plugin/index/render-closure' => $params
 	  		));
 	  	/// }
   		return new ViewModel();

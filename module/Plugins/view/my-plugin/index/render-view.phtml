@@ -1,5 +1,5 @@
 <div class="alert alert-info">
-This is plugins/comment/index/render-view.phtml<br>
+This is plugins/my-plugin/index/render-view.phtml<br>
 Any of your project controller/action can be a plugin !!<br>
 A plugin : <br>
 &nbsp;&nbsp;&nbsp;Can be a form such as comment box, with submit, and save to database<br>
@@ -34,7 +34,7 @@ $('#ajaxForm').submit(function(e) {
 	e.preventDefault(); 
 	$('.ajaxContent').html("");
 	$.ajax({
-		url:"/plugins/comment/index/ajax",
+		url:"/plugins/my-plugin/index/ajax",
 		type:"post",
 		data:{
 			ajaxVariable:$('#ajaxVariable').val()
