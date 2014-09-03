@@ -35,5 +35,7 @@ What this can do?
 
 Install
 =======
-Just copy Zf2Plugins to your vendor and enable it.
+Just copy Zf2Plugins to your vendor and enable it.<br>
+See Sample module as help.<br>
+In plugin config file there is 'autoload-plugins' config that you can set each plugin, autoload in some modules or controllers or actions.
 
