@@ -4,6 +4,11 @@ zf2Plugin
 Plugin component for Zend Framework 2
 Create your custom flexible plugins by zf2plugin
 
+Requirements
+============
+PHP >= 5.3
+ZendDeveloperTools (optional)
+
 Where can I use this?
 =====================
 <ul>
@@ -16,9 +21,15 @@ Where can I use this?
 What this can do?
 =================
 <ul>
-	<li>Each plugin can be an object(such as ViewModel)/rendered view/array/closure and anything else</li>
-	<li>Dynamic load plugins in all routes which you want</li>
-	<li>Define autoload match by pattern or by exact route-controller-action </li>
-	<li>And you know ...</li>
+	<li>Create plugin, like as you write a normal controller</li>
+	<li>MVC structure plugin</li>
+	<li>Each plugin can return an object(such as ViewModel)/rendered view/array/closure or anything else</li>
+	<li>Autoload plugins in all routes which you want</li>
+	<li>Define autoload plugins by pattern or by exact route-controller-action </li>
+	<li>Generate some dynamic html just by one line code</li>
 </ul>
+
+Install
+=======
+Just copy Zf2Plugins to your vendor and enable it.
 
