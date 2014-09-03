@@ -1,4 +1,4 @@
-zf2Plugin
+Zf2Plugin
 =========
 
 Plugin component for Zend Framework 2<br>
@@ -17,6 +17,10 @@ Where can I use this?
 	<li>When you need reusable content</li>
 	<li>And you know ...</li>
 </ul>
+
+How this work?
+==============
+<a href="https://raw.githubusercontent.com/mbrostami/zf2Plugin/master/Zf2plugin-diagram.png">Click here</a>
 
 What this can do?
 =================
