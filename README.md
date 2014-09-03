@@ -20,7 +20,7 @@ Where can I use this?
 
 How this work?
 ==============
-<a href="https://raw.githubusercontent.com/mbrostami/zf2Plugin/master/Zf2plugin-diagram.png">Click here</a>
+<a href="https://raw.githubusercontent.com/mbrostami/zf2Plugin/master/Zf2Plugin.png">Click here</a>
 
 What this can do?
 =================
