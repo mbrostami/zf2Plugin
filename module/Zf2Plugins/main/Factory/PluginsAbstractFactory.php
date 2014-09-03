@@ -1,9 +1,9 @@
 <?php 
-namespace Plugins\Factory;
+namespace Zf2Plugins\Factory;
 
 use Zend\ServiceManager\AbstractFactoryInterface; 
 use Zend\ServiceManager\ServiceLocatorInterface;  
-use Plugins\PluginService\PluginLoader;
+use Zf2Plugins\PluginService\PluginLoader;
 
 class PluginsAbstractFactory implements AbstractFactoryInterface
 {

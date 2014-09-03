@@ -2,7 +2,7 @@
 return array( 
 		'service_manager' => array(
 				'invokables' => array(
-						'plugins.toolbar' => 'Plugins\Toolbar\Collector\PluginsCollector',
+						'plugins.toolbar' => 'Zf2Plugins\Toolbar\Collector\PluginsCollector',
 				),
 		), 
 		'zenddevelopertools' => array(

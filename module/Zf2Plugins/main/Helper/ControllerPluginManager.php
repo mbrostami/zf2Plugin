@@ -1,5 +1,5 @@
 <?php
-namespace Plugins\Helper;
+namespace Zf2Plugins\Helper;
 
 use Zend\Mvc\Controller\Plugin\AbstractPlugin;
 use Application\Traits\HelperTrait;  
@@ -8,7 +8,7 @@ use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
 /* @var $viewRenderer \Zend\View\Renderer\PhpRenderer */ 
-/* @var $pluginLoader \Plugins\PluginService\PluginLoader */
+/* @var $pluginLoader \Zf2Plugins\PluginService\PluginLoader */
 
 class ControllerPluginManager extends AbstractPlugin
 { 

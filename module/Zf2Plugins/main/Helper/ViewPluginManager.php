@@ -1,5 +1,5 @@
 <?php
-namespace Plugins\Helper;
+namespace Zf2Plugins\Helper;
 
 use Zend\View\Helper\AbstractHelper;
 use Application\Traits\HelperTrait; 
@@ -11,7 +11,7 @@ class ViewPluginManager extends AbstractHelper
 {
  
 	/**  
-	 * @var \Plugins\PluginService\PluginLoader
+	 * @var \Zf2Plugins\PluginService\PluginLoader
 	 */
 	protected $pluginLoader;
 	

@@ -1,5 +1,5 @@
 <?php 
-namespace Plugins\PluginService;
+namespace Zf2Plugins\PluginService;
 
 use Zend\ServiceManager\ServiceManager;
 use Zend\Mvc\MvcEvent; 

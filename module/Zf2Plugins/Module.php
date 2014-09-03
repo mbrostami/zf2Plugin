@@ -7,15 +7,15 @@
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 
-namespace Plugins;
+namespace Zf2Plugins;
  
 use Zend\Mvc\MvcEvent;
 use Zend\Db\Adapter\Adapter as Adapter;
 use Zend\Config\Reader\Json as JsonParser;
 use Zend\ServiceManager\ServiceManager;
-use Plugins\Helper\ControllerPluginManager;
-use Plugins\Helper\ViewPluginManager;
-use Plugins\Listener\PluginListener;
+use Zf2Plugins\Helper\ControllerPluginManager;
+use Zf2Plugins\Helper\ViewPluginManager;
+use Zf2Plugins\Listener\PluginListener;
 
 class Module
 { 
@@ -82,7 +82,7 @@ class Module
     {
     	return array( 
     			'abstract_factories' => array(
-    					'Plugins\Factory\PluginsAbstractFactory'
+    					'Zf2Plugins\Factory\PluginsAbstractFactory'
     			),
     	);
     }

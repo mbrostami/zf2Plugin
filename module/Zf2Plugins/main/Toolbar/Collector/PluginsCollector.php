@@ -1,6 +1,6 @@
 <?php
 
-namespace Plugins\Toolbar\Collector;
+namespace Zf2Plugins\Toolbar\Collector;
 
 use ZendDeveloperTools\Collector\CollectorInterface;
 use Zend\Mvc\MvcEvent;

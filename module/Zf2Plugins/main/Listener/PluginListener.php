@@ -1,5 +1,5 @@
 <?php
-namespace Plugins\Listener;
+namespace Zf2Plugins\Listener;
  
 use Zend\EventManager\ListenerAggregateInterface;
 use Zend\Mvc\MvcEvent;
@@ -17,10 +17,10 @@ use Zend\EventManager\EventManagerInterface;
  * EVENT_RENDER => *  note:after rendering controller
  * EVENT_RENDER_ERROR => !(view file)
  * EVENT_FINISH => !module || !controller || !action
- * @author mbrostami <mb.rostami.h@gmail.com>
- * @author kourosh sharifi < >
- *
+ * @author mbrostami <mb.rostami.h@gmail.com> 
  */
+
+/* @var $enablePlugins \Zf2Plugins\PluginService\ControllerPluginManager */
 
 class PluginListener implements ListenerAggregateInterface
 {
@@ -76,7 +76,7 @@ class PluginListener implements ListenerAggregateInterface
 	{
 		$serviceManager = $event->getApplication()->getServiceManager(); 
 		$controllerPluginManager = $serviceManager->get("ControllerPluginManager");
-		/* @var $enablePlugins \Plugins\PluginService\ControllerPluginManager */
+
 		$enablePlugins = $controllerPluginManager->get("enablePlugins"); 
 		$enablePlugins->autoloadPlugins(); 
 	}
