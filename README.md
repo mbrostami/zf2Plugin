@@ -36,6 +36,10 @@ How this work?
 Install
 =======
 Just copy Zf2Plugins to your vendor and enable it.<br>
-See Sample module as help.<br>
-In plugin config file there is 'autoload-plugins' config that you can set each plugin, autoload in some modules or controllers or actions.
+There is "Sample" module as help in source code.<br>
+In plugin config file there is 'autoload-plugins' config that you can set each plugin, autoload in some modules or controllers or actions.<br>
+See <a href="https://github.com/mbrostami/zf2Plugin/wiki">wiki</a> for begin to write a plugin.
 
+Contact me
+======
+mb.rostami.h[at]gmail.com
