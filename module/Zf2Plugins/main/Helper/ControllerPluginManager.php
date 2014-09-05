@@ -22,8 +22,8 @@ class ControllerPluginManager extends AbstractPlugin
 	public function autoloadPlugins()
 	{
 		$pluginLoader = $this->serviceLocator->get("Plugins");
-		$controller = $this->getController();
-		if (! $controller) {
+		$controllerObject = $this->getController();
+		if (! $controllerObject) {
 			return;
 		}   
 		if ($pluginLoader->autoPlugins) { 
@@ -35,10 +35,10 @@ class ControllerPluginManager extends AbstractPlugin
 				$forward = false; 
 				if (isset($pluginRequest[2])) {
 					list($plugin, $controller, $method) = $pluginRequest;
-					$forward = $controller->forward()->dispatch(ucfirst($plugin).'\Controller\\'.ucfirst($controller), array('action' => ucfirst($method)));
+					$forward = $controllerObject->forward()->dispatch(ucfirst($plugin).'\Controller\\'.ucfirst($controller), array('action' => ucfirst($method)));
 				} elseif (isset($pluginRequest[1])) {
 					list($plugin, $controller) = $pluginRequest;
-					$forward = $controller->forward()->dispatch(ucfirst($plugin).'\Controller\\'.ucfirst($controller));
+					$forward = $controllerObject->forward()->dispatch(ucfirst($plugin).'\Controller\\'.ucfirst($controller));
 				}  
 				if ($forward) { 
 					if ($forward instanceof \Closure) {
@@ -58,8 +58,8 @@ class ControllerPluginManager extends AbstractPlugin
 	public function __invoke($extraPluginNames)
 	{ 
 		$pluginLoader = $this->serviceLocator->get("Plugins");
-		$controller = $this->getController();
-		if (! $controller) {
+		$controllerObject = $this->getController();
+		if (! $controllerObject) {
 			return;
 		}
 		if (is_array($extraPluginNames)) { 
@@ -71,10 +71,10 @@ class ControllerPluginManager extends AbstractPlugin
 				if (isset($pluginRequest[2])) {
 					list($plugin, $controller, $action) = $pluginRequest;  
 					$variables['action'] = $action;
-					$forward = $controller->forward()->dispatch(ucfirst($plugin).'\Controller\\'.ucfirst($controller), $variables);
+					$forward = $controllerObject->forward()->dispatch(ucfirst($plugin).'\Controller\\'.ucfirst($controller), $variables);
 				} elseif (isset($pluginRequest[1])) {
 					list($plugin, $controller) = $pluginRequest;  
-					$forward = $controller->forward()->dispatch(ucfirst($plugin).'\Controller\\'.ucfirst($controller), $variables);
+					$forward = $controllerObject->forward()->dispatch(ucfirst($plugin).'\Controller\\'.ucfirst($controller), $variables);
 				}
 				if ($forward instanceof \Closure) {
 					$pluginLoader->loadPlugin($pluginName);
