@@ -3,7 +3,13 @@ Zf2Plugin
 
 Plugin component for Zend Framework 2<br>
 Create your custom flexible plugins by zf2plugin
+
  
+Available plugins
+==============
+<a href="https://github.com/mbrostami/zf2plugin-dataTable">Zf2Plugin DataTable</a>
+
+
 What this can do?
 =================
 <ul>
